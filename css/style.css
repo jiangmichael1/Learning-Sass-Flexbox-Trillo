@@ -208,7 +208,13 @@ body {
     display: block; }
 
 /* HOTEL OVERVIEW */
-.overview__icon-star, .overview__icon-location {
-  width: 1.75rem;
-  height: 1.75rem;
-  fill: var(--color-primary); }
+.overview {
+  display: flex; }
+  .overview__heading {
+    text-transform: uppercase; }
+  .overview__stars {
+    margin-right: auto; }
+  .overview__icon-star, .overview__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary); }
