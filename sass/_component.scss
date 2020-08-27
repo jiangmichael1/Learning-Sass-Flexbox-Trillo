@@ -165,11 +165,14 @@
         left: 0;
         height: 100%;
         width: 3px;
+
+        
         background-color: var(--color-primary);
         transform: scaleY(0); 
         transition: transform .2s,
                     width .4s cubic-bezier(1,0,0,1) .2s,
                     background-color .1s; 
+        
     }
 
     &__item:hover::before,
@@ -400,13 +403,18 @@
         width: 1rem;
         margin-right: .7rem;
 
-        //newer browsers - masks
+        background-image: url(../img/chevron-thin-right.svg);
+        background-size: cover;
 
-        background-color: var(--color-primary);
-        -webkit-mask-image: url(../img/chevron-thin-right.svg);
-        -webkit-mask-size: cover;
-        mask-image: url(../img/chevron-thin-right.svg);
-        mask-size: cover;
+        //newer browsers - masks
+        @supports (-webkit-mask-image: url()) or (-webkit-mask-image:url()){
+            background-color: var(--color-primary);
+            -webkit-mask-image: url(../img/chevron-thin-right.svg);
+            -webkit-mask-size: cover;
+            mask-image: url(../img/chevron-thin-right.svg);
+            mask-size: cover;
+            background-image: none;
+        }
         
     
         //older browsers
