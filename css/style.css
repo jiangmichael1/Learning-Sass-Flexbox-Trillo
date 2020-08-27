@@ -410,11 +410,22 @@ body {
   border-radius: 100px;
   border-bottom: none;
   background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
-  color: #fff; }
-  .btn__visible {
+  color: #fff;
+  position: relative;
+  overflow: hidden; }
+  .btn > * {
     display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all .2s; }
+  .btn__visible {
     padding: 2rem 7.5rem; }
   .btn__invisible {
-    display: inline-block;
     position: absolute;
-    left: 0; }
+    padding: 2rem 0;
+    left: 0;
+    top: -100%; }
+  .btn:hover .btn__visible {
+    transform: translateY(100%); }
+  .btn:hover .btn__invisible {
+    top: 0; }
