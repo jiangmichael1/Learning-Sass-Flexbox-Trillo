@@ -353,11 +353,11 @@ body {
   background-color: #fff;
   box-shadow: var(--shadow-light);
   padding: 3rem;
-  margin-bottom: 3.5rem; }
+  margin-bottom: 3.5rem;
+  position: relative; }
   .review__text {
-    margin-bottom: 2rem;
     z-index: 10;
-    position: relative;
+    margin-bottom: 2rem;
     overflow: hidden; }
   .review__user {
     display: flex;
@@ -391,3 +391,13 @@ body {
     color: var(--color-grey-light-2);
     font-family: sans-serif;
     z-index: 1; }
+
+/* CALL TO ACTION */
+.cta {
+  padding: 3.5rem 0;
+  text-align: center; }
+  .cta__book-now {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase; }
